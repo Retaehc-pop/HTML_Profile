@@ -16,7 +16,7 @@
         <ul>
             <li><a href="#" class='active'>Home</a></li>
             <li><a href="#prof">About</a></li>
-            <li><a href="#skill">Skill</a></li>
+            <li><a href="#skills">Skill</a></li>
             <li><a href="#proj">Project</a></li>
             <li><a href="#contact">Contract</a></li>
         </ul>
@@ -92,42 +92,73 @@
         </div>
     </div>
     
-    <div class='skill' id='skill'>
+    <div class='skill' id='skills'>
         <h1>Skills</h1>
             <h2>Programming</h2>
             <ul>
-                <li><h3>Python</h3></li>
-                <li><h3>C++</h3></li>
-                <li><h3>C</h3></li>
-                <li><h3>HTML</h3></li>
-                <li><h3>CSS</h3></li>
-                <li><h3>Solidity</h3></li>
-                <li><h3>Flutter/Dart</h3></li>
+                <li><button type='button' onclick="skillFunction('python')" >Python</button></li>
+                <li><button type='button' onclick="skillFunction('C++')">C++</button></li>
+                <li><button type='button' onclick="skillFunction('C')">C</button></li>
+                <li><button type='button' onclick="skillFunction('HTML')">HTML</button></li>
+                <li><button type='button' onclick="skillFunction('CSS')">CSS</button></li>
+                <li><button type='button' onclick="skillFunction('Solidity')">Solidity</button></li>
+                <li><button type='button' onclick="skillFunction('Dart')">Flutter/Dart</button></li>
             </ul>
+            <p id='python' class='card'>This is python</p>
+            <p id='C++' class='card'>This is C++</p>
+            <p id='C' class='card'>This is C</p>
+            <p id='HTML' class='card'>This is HTML</p>
+            <p id='CSS' class='card'>This is CSS</p>
+            <p id='Solidity' class='card'>This is Solidity</p>
+            <p id='Dart' class='card'>This is Flutter/Dart</p>
             <h2>Language</h2>
             <ul>
-                <li><h3>Thai</h3></li>
-                <li><h3>English</h3></li>
-                <li><h3>German</h3></li>
+                <li><button type='button' onclick="skillFunction('thai')">Thai</h3></li>
+                <li><button type='button' onclick="skillFunction('english')">English</h3></li>
+                <li><button type='button' onclick="skillFunction('german')">German</h3></li>
             </ul>
+            <p id='thai' class='card'>This is thai</p>
+            <p id='english' class='card'>This is english</p>
+            <p id='german' class='card'>This is german</p>
             <h2>Gaming</h2>
             <ul>
-                <li><h3>Rainbow 6</h3></li>
-                <li><h3>Apex Legend</h3></li>
-                <li><h3>DBD</h3></li>
-                <li><h3>Civ 6</h3></li>
-                <li><h3>Overwatch</h3></li>
+                <li><button type='button' onclick="skillFunction('r6')">Rainbow 6</button></li>
+                <li><button type='button' onclick="skillFunction('apex')">Apex Legend</button></li>
+                <li><button type='button' onclick="skillFunction('dbd')">DBD</button></li>
+                <li><button type='button' onclick="skillFunction('civ')">Civ 6</button></li>
+                <li><button type='button' onclick="skillFunction('ow')">Overwatch</button></li>
             </ul>
+            <p id='r6' class='card'>rainbow 6</p>
+            <p id='apex' class='card'>apex 1300 b</p>
+            <p id='dbd' class='card'>dead by daylight</p>
+            <p id='civ' class='card'>civilization 6</p>
+            <p id='ow' class='card'>overwatch</p>
             <h2>Other Hobbies</h2>
             <ul>
-                <li><h3>Sport: Basketball</h3></li>
-                <li><h3>Music: Guitar</h3></li>
-                <li><h3>Typing: 80WPM</h3></li>
-                <li><h3>Cook</h3></li>
-                <li><h3>Photograph</h3></li>
+                <li><button type='button' onclick="skillFunction('sport')">Sport</button></li>
+                <li><button type='button' onclick="skillFunction('music')">Music</button></li>
+                <li><button type='button' onclick="skillFunction('typing')">Typing</button></li>
+                <li><button type='button' onclick="skillFunction('cook')">Cook</button></li>
+                <li><button type='button' onclick="skillFunction('photo')">Photograph</button></li>
             </ul>
+            <p id='sport' class='card'>Basketball</p>
+            <p id='music' class='card'>Guitar</p>
+            <p id='typing' class='card'>Typing</p>
+            <p id='cook' class='card'>Cook steak</p>
+            <p id='photo' class='card'>Photography</p>
               
     </div>
+    <script>
+        function skillFunction(index) {
+            var x = document.getElementById(index);
+            let elements = document.getElementsByClassName('card');
+            for (let i = 0; i < elements.length; i++){
+                elements[i].style.display = "none";
+                }
+            x.style.display = "block";
+            }
+            
+    </script>
     <div class='project' id='proj'>
         <h1>Project</h1>
         <section id="timeline">
