@@ -1,7 +1,7 @@
 $(function () {
 	var timeline = $("#timeline").find(".line");
 	var timelineDot = $(timeline).find(".dot");
-	var numDots = $(timeline).find(".year.dot").length * 4 + 1;
+	var numDots = $(timeline).find(".dot").length;
 	var mobileYear = $(timeline).find(".year.dot");
 	var mobileDefault = $(timeline).find(".dot.js-mobile-default");
 
@@ -45,32 +45,30 @@ $(function () {
 		}, 250);
 	});
 
-	// DESKTOP FUNCTIONALITY
 	function desktopTimeline() {
-		$(timelineDot).each(function () {
-			// highlight the appropriate portion of the line as you click the dots
-			var ind = Number(findIndex($(this)));
-			var x = round((0.9 / numDots) * ind * 115, 4);
-			var y = round(((0.9 / numDots) * 115 /2), 4);
-			var z = x + y;
+        $(timelineDot).each(function () {
+            // highlight the appropriate portion of the line as you click the dots
+            var ind = Number(findIndex($(this)));
+            var x = round((1 / numDots) * ind * 100, 4);
+            var y = round(((1 / numDots) * 100 / 2), 4);
+            var z = x + y;
 
-			$(this).click(function () {
-				$(timelineDot).removeClass("active complete");
-				$(this).addClass("active");
-				$(this).prevAll(".dot").addClass("complete");
-				$(timeline).css({
-					background:
-						"linear-gradient(to right, " +
-						"#216aaf " +
-						z +
-						"%, " +
-						"#fbfcfc " +
-						z +
-						"%)"
-				});
-			});
-		});
-	}
+            $(this).click(function () {
+                $(timelineDot).removeClass("active complete");
+                $(this).addClass("active");
+                $(this).prevAll(".dot").addClass("complete");
+                $(timeline).css({
+                    background:
+                        "linear-gradient(to right, " +
+                        "#216aaf " +
+                        `calc(${z}% - ${0.3 * 2 * ind}vw), ` +
+                        "#fbfcfc " +
+                        `calc(${z}% - ${0.3 * 2 * ind}vw)` +
+                        ")"
+                });
+            });
+        });
+    }
 
 	// MOBILE FUNCTIONALITY
 	function mobileTimeline() {

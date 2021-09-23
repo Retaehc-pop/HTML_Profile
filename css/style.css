@@ -309,8 +309,8 @@ header ul li a.active {
   position: relative;
   left: 5.3%;
   box-sizing: border-box;
-  margin-right: calc(2.65% - 12.5px);
-  margin-left: calc(2.65% - 12.5px);
+  margin-right: calc(2.63% - 12.5px - 0.3vw);
+  margin-left: calc(2.63% - 12.5px - 0.3vw);
   width: 25px;
   height: 25px;
   top: -10px;
@@ -340,8 +340,8 @@ header ul li a.active {
   position: relative;
   left: 5.3%;
   box-sizing: border-box;
-  margin-right: calc(2.65% - 11.5px);
-  margin-left: calc(2.65% - 11.5px);
+  margin-right: calc(2.63% - 7.5px - 0.3vw);
+  margin-left: calc(2.63% - 7.5px - 0.3vw);
   width: 15px;
   height: 15px;
   top: -5px;
