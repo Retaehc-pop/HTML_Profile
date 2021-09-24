@@ -219,6 +219,12 @@ header ul li a.active {
   list-style: none;
   margin-left: 20px;
 }
+.skill #bg {
+  width: 85vw;
+  height: 100%;
+  opacity: 0.3;
+  align-items: center;
+}
 .skill ul li button {
   text-decoration: none;
   padding: 10px 15px;
